@@ -8,12 +8,15 @@ export default function Home() {
   return (
     <div className='home-container'>
         {list.map((item, index) => {
-            <MovieCard 
-            key={index}
-            img={item.Images[0]}
-            runtime={item.Runtime}
-            gener={item.Genre}
-            language={item.Language} />
+            return (
+                <MovieCard 
+                key={index}
+                img={item.Images[0]}
+                year={item.Year}
+                runtime={item.Runtime}
+                gener={item.Genre}
+                language={item.Language} />
+            )
         })}
     </div>
   )

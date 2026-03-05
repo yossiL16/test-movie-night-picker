@@ -1,4 +1,4 @@
-export default function MovieCard({img, runtime, gener, language}) {
+export default function MovieCard({img, year, runtime, gener, language}) {
 
   return (
     <div className="card-home">
