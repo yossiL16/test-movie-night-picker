@@ -1,19 +1,11 @@
 import './App.css'
-import { useMovies } from './store/zustand'
+import Home from './pages/Home'
 
 function App() {
 
-
-const list = useMovies((state) => state.listMovies)
-
-function handle(){
-  console.log(list);
-  
-}
-
   return (
     <>
-    <button onClick={handle}>get item</button>
+    <Home />
     </>
   )
 }
