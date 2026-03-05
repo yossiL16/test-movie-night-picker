@@ -8,11 +8,6 @@ app.use(cors());
 
 const PORT = 3000;
 
-
-
-
-
-
 app.get('/', (req,res) => {
     res.send("hello from router")
     console.log("hello from router");
@@ -25,7 +20,6 @@ app.get("/api/movies", async (req,res) => {
         res.json(err)
     }
 })
-
 
 
 app.listen(PORT, ()=> {

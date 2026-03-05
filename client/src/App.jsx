@@ -2,10 +2,25 @@ import './App.css'
 
 function App() {
 
+  async function getData(){
+      const url = "https://http://localhost:/api/movies";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
 
   return (
     <>
-
+    <button onClick={getData}>get data</button>
     </>
   )
 }
