@@ -41,7 +41,8 @@ export default function Home() {
                 year={item.Year}
                 runtime={item.Runtime}
                 gener={item.Genre}
-                language={item.Language} />
+                language={item.Language}
+                obj={item} />
             )
         })}
     </div>

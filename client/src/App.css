@@ -101,3 +101,13 @@ body {
 .card-home button:hover {
     opacity: 0.8;
 } 
+
+
+.low-title {
+    color: #05020290;
+}
+
+.title-details{
+    display: flex;
+    gap: 5px;
+}

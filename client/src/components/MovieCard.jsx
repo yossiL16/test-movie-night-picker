@@ -1,7 +1,19 @@
-export default function MovieCard({img, year, runtime, gener, language}) {
+import { useNavigate } from 'react-router-dom'
+import { useMovies } from '../store/zustand';
+
+export default function MovieCard({img, year, runtime, gener, language, obj}) {
+    
+    const navigate = useNavigate();
+
+    const addObj = useMovies((state) => state.addObj)
+    
+    function handleButton(){
+        addObj(obj)
+        navigate('/Details')
+    }
+
 
     
-
   return (
     <div className="card-home">
         <div className="image-item">
@@ -13,7 +25,7 @@ export default function MovieCard({img, year, runtime, gener, language}) {
             <p>{gener}</p>
             <p>{language}</p>
         </div>
-        <button>Select Seats</button>
+        <button onClick={handleButton}>Select Seats</button>
     </div>
   )
 }
