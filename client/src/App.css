@@ -18,6 +18,23 @@ body {
     align-items: center;
 }
 
+.main {
+    width: 100%;
+}
+
+.serch-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-serch {
+    height: 50px;
+    width: 70%;
+    border-radius: 30px;
+    border: 1px solid;
+}
+
 .card-home {
     background: rgb(250, 250, 250);
     border-radius: 20px;

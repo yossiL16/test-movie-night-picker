@@ -17,18 +17,22 @@ export default function Home() {
 	}, [query]);
 
   return (
-    <div className='home-container'>
+    <div className='main'>
         <header>
             <h1>Movie Nigh</h1>
             <h2>Search a movie and pick your seats</h2>
             <div className='serch-div'>
-                <input type="text"
+                <input
+                className='input-serch' 
+                type="text"
                 placeholder='Search movie by title...'
                 value={query}
                 onChange={(e) => setQuery(e.target.value)} />
             </div>
 
         </header>
+    <div className='home-container'>
+        
         {filteredItems.map((item, index) => {
             return (
                 <MovieCard 
@@ -40,6 +44,7 @@ export default function Home() {
                 language={item.Language} />
             )
         })}
+    </div>
     </div>
   )
 }
