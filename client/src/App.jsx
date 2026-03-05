@@ -1,26 +1,19 @@
 import './App.css'
+import { useMovies } from './store/zustand'
 
 function App() {
 
-  async function getData(){
-      const url = "http://localhost:3000/api/movies";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
 
-    const result = await response.json();
-    console.log(result);
-  } catch (error) {
-    console.error(error.message);
-  }
+const list = useMovies((state) => state.listMovies)
+
+function handle(){
+  console.log(list);
+  
 }
-
 
   return (
     <>
-    <button onClick={getData}>get data</button>
+    <button onClick={handle}>get item</button>
     </>
   )
 }
