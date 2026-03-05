@@ -13,7 +13,7 @@ app.get('/', (req,res) => {
     console.log("hello from router");
 })
 
-app.get("/api/movies", async (req,res) => {
+app.get("/api/movies", (req,res) => {
     try {
     res.json(movies)
     } catch(err){
