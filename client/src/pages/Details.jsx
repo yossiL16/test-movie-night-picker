@@ -11,9 +11,11 @@ export default function Details() {
   function handleClick(){
     removeObj()
     navigate('/')
-
   }
-  
+
+  function handleSeats(){
+    navigate('/Seats')
+  }
   
   return (
     <div className='container-details'>
@@ -52,10 +54,9 @@ export default function Details() {
             </div>
           </div>
           <div className='low'>
-            <button>Go to Seats</button>
+            <button onClick={handleSeats}>Go to Seats</button>
             <button onClick={handleClick}>Back to list</button>
           </div>
-
         </div>
       </div>
     </div>

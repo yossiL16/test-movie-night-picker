@@ -111,3 +111,34 @@ body {
     display: flex;
     gap: 5px;
 }
+
+.green {
+    height: 10px;
+    width: 10px;
+    border-radius: 2px;
+    background-color: greenyellow;
+}
+
+.red {
+    height: 10px;
+    width: 10px;
+    border-radius: 2px;
+    background-color: red;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.right-header {
+    display: flex;
+
+}
+
+.y-h {
+    display: flex;
+    margin: 5px;
+    
+}
