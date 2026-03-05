@@ -1,13 +1,35 @@
+import React, { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard'
 import { useMovies } from '../store/zustand'
 
 export default function Home() {
 
     const list = useMovies((state) => state.listMovies)
+    const [query, setQuery] = useState('');
+	const [filteredItems, setFilteredItems] = useState([]);
+
+    useEffect(() => {
+		const filtered = list.filter(item =>
+			item.Title.toLowerCase().includes(query.toLowerCase()) ||
+            item.Genre.toLowerCase().includes(query.toLowerCase())
+		);
+		setFilteredItems(filtered);
+	}, [query]);
 
   return (
     <div className='home-container'>
-        {list.map((item, index) => {
+        <header>
+            <h1>Movie Nigh</h1>
+            <h2>Search a movie and pick your seats</h2>
+            <div className='serch-div'>
+                <input type="text"
+                placeholder='Search movie by title...'
+                value={query}
+                onChange={(e) => setQuery(e.target.value)} />
+            </div>
+
+        </header>
+        {filteredItems.map((item, index) => {
             return (
                 <MovieCard 
                 key={index}
