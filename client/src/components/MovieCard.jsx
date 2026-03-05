@@ -1,5 +1,7 @@
 export default function MovieCard({img, year, runtime, gener, language}) {
 
+    
+
   return (
     <div className="card-home">
         <div className="image-item">
